@@ -1,5 +1,6 @@
 {% extends 'utilities/obj_edit.html' %}
 {% load form_helpers %}
+{% load buttons %}
 
 {% block form %}
     <div class="panel panel-default">
@@ -10,7 +11,20 @@
             {% render_field form.facility_id %}
             {% render_field form.group %}
             {% render_field form.status %}
-            {% render_field form.role %}
+
+              <table class="table ">
+                <tr>
+                  <td class="align-text-left">{% render_field form.role %}</td>
+                  <td class="valign-center">{% if perms.dcim.add_rackrole %}
+                       {% add_button 'dcim:rackrole_add' %}
+                  {% endif %}</td>
+                </tr>
+
+              </table>
+
+          <br>
+          <br>
+
             {% render_field form.serial %}
             {% render_field form.asset_tag %}
         </div>

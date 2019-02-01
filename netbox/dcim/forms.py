@@ -344,6 +344,7 @@ class RackForm(BootstrapMixin, TenancyForm, CustomFieldForm):
         help_texts = {
             'site': "The site at which the rack exists",
             'name': "Organizational rack name",
+            'role':"Select Rack Role or Add a new one", 
             'facility_id': "The unique rack ID assigned by the facility",
             'u_height': "Height in rack units",
         }

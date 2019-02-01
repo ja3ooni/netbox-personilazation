@@ -441,12 +441,13 @@ table.report th a {
 }
 .panel table {
     margin-bottom: 0;
+    border: none;
 }
 .panel .table th {
-    border-bottom-width: 1px;
+    border: none;
 }
 .panel table tr.even:first-child td {
-    border-top: 0;
+    border-top: none;
 }
 .panel .list-group {
     max-height: 400px;
